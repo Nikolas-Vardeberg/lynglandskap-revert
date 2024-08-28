@@ -1,11 +1,11 @@
-import { Star } from 'phosphor-react'
+import { FastForward, List, ListNumbers } from 'phosphor-react'
 import { defineField, defineType } from 'sanity'
 
 export default defineType({
-  name: 'FeaturedItems',
-  title: 'Featured Items',
+  name: 'List',
+  title: 'List',
   type: 'object',
-  icon: Star,
+  icon: List,
   fields: [
     defineField({
       type: 'string',
@@ -14,25 +14,32 @@ export default defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+        type: 'text',
+        name: 'body',
+        title: 'Body',
+        validation: (rule) => rule.required(),
+      }),
+    defineField({
       type: 'array',
-      name: 'blocks',
-      title: 'Blocks',
+      name: 'listings',
+      title: 'Listings',
       of: [
         {
           type: 'object',
-          name: 'featuredItem',
-          icon: Star,
+          name: 'Listings',
+          icon: ListNumbers,
           fields: [
             defineField({
               type: 'string',
-              name: 'heading',
-              title: 'Heading',
+              name: 'year',
+              title: 'Year',
               validation: (rule) => rule.required(),
             }),
             defineField({
-              type: 'text',
-              name: 'body',
-              title: 'Body',
+              type: 'string',
+              name: 'name',
+              title: 'Name',
+              validation: (rule) => rule.required(),
             }),
           ],
         },
@@ -41,11 +48,11 @@ export default defineType({
   ],
   preview: {
     select: {
-      title: 'heading',
+      title: 'Heading',
     },
     prepare({ title }) {
       return {
-        subtitle: 'Featured Items',
+        subtitle: 'Heading',
         title,
       }
     },

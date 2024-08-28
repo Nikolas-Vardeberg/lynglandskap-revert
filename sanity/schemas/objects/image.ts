@@ -1,23 +1,12 @@
-import { FlagBanner } from 'phosphor-react'
+import { Image } from 'phosphor-react'
 import { defineField, defineType } from 'sanity'
 
 export default defineType({
-  name: 'CtaBanner',
-  title: 'Cta Banner',
+  name: 'Image',
+  title: 'Image',
   type: 'object',
-  icon: FlagBanner,
+  icon: Image,
   fields: [
-    defineField({
-      type: 'string',
-      name: 'heading',
-      title: 'Heading',
-      validation: (rule) => rule.required(),
-    }),
-    defineField({
-      name: 'cta',
-      title: 'Cta',
-      type: 'Cta',
-    }),
     defineField({
       type: 'image',
       options: {
@@ -34,12 +23,12 @@ export default defineType({
   ],
   preview: {
     select: {
-      title: 'heading',
+      title: 'imageAlt',
       media: 'image',
     },
     prepare({ title, media }) {
       return {
-        subtitle: 'Cta Banner',
+        subtitle: 'Image',
         media,
         title,
       }

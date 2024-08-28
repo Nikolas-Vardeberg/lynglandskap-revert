@@ -1,18 +1,20 @@
-import { CtaBanner } from 'components/CtaBanner'
-import { FeaturedItems } from 'components/FeaturedItems'
-import { FeaturedText } from 'components/FeaturedText'
+import { Fastlink } from 'components/Fastlink'
+import { Image } from 'components/Image'
+import { List } from 'components/List'
 import { MainHero } from 'components/MainHero'
-import { MediaModule } from 'components/MediaModule'
+import { Mediemodul } from 'components/Mediemodul'
 import { Quote } from 'components/Quote'
+import { Rows } from 'components/Rows'
 import { Text } from 'components/Text'
 
 const componentsMap = {
   MainHero,
   Quote,
-  FeaturedItems,
-  MediaModule,
-  CtaBanner,
-  FeaturedText,
+  Fastlink,
+  Mediemodul,
+  Image,
+  List,
+  Rows,
   Text,
 }
 

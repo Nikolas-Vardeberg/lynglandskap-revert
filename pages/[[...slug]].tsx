@@ -33,7 +33,7 @@ export default function ProjectSlugRoute(props: PageProps) {
   const { page, preview, token } = props
 
   const Page = ({ page }) => (
-    <>{page?.sections?.map((section) => buildComponent(section))}</>
+    <>{page?.sections?.map((section: any) => buildComponent(section))}</>
   )
 
   if (preview) {
