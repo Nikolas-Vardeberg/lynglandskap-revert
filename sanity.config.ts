@@ -29,6 +29,8 @@ import image from './sanity/schemas/objects/image'
 import rows from './sanity/schemas/objects/rows'
 import mediemodul from './sanity/schemas/objects/mediemodul'
 import list from './sanity/schemas/objects/list'
+import service from './sanity/schemas/documents/service'
+import blog from './sanity/schemas/documents/blog'
 
 const title = process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE
 
@@ -45,6 +47,8 @@ export default defineConfig({
       // Singletons
       // Documents
       page,
+      service,
+      blog,
       navigation,
       footer,
       // Objects
