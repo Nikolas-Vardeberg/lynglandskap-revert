@@ -16,7 +16,7 @@ export default defineType({
             type: "text",
         },
         {
-            name: "keywords",
+            name: "seoKeywords",
             title: "Keywords",
             type: "array",
             of: [

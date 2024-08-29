@@ -6,17 +6,29 @@ export default defineType({
   name: 'blog',
   title: 'Blogs',
   icon: Browser,
+  groups: [
+    {
+      name: "page",
+      title: "Page",
+      default: true,
+    },
+    {
+      name: "seo",
+      title: "Seo"
+    }
+  ],
   fields: [
     defineField({
-      type: 'string',
-      name: 'title',
-      title: 'Title',
-      validation: (rule) => rule.required(),
+      name: "seo",
+      title: "Seo",
+      type: "seoPanel",
+      group: "seo",
     }),
     defineField({
       type: 'slug',
       name: 'slug',
       title: 'Slug',
+      group: "page",
       options: {
         source: 'title',
       },
@@ -26,6 +38,7 @@ export default defineType({
       type: 'array',
       name: 'sections',
       title: 'Sections',
+      group: "page",
       of: [
         defineArrayMember({ type: 'MainHero' }),
         defineArrayMember({ type: 'Quote' }),

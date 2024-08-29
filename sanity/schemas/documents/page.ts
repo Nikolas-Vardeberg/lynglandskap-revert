@@ -8,26 +8,21 @@ export default defineType({
   icon: Browser,
   groups: [
     {
-      name: "seo",
-      title: "Seo",
+      name: "page",
+      title: "Page",
+      default: true,
     },
     {
-      name: "Page",
-      title: "page"
+      name: "seo",
+      title: "Seo"
     }
   ],
-  //SEO META DATA
   fields: [
-    //defineField({
-      //type: 'string',
-      //name: 'title',
-      //title: 'Title',
-      //validation: (rule) => rule.required(),
-    //}),
     defineField({
       name: "seo",
       title: "Seo",
       type: "seoPanel",
+      group: "seo",
     }),
     defineField({
       type: 'slug',
@@ -37,11 +32,13 @@ export default defineType({
         source: 'title',
       },
       validation: (rule) => rule.required(),
+      group: "page",
     }),
     defineField({
       type: 'array',
       name: 'sections',
       title: 'Sections',
+      group: "page",
       of: [
         defineArrayMember({ type: 'MainHero' }),
         defineArrayMember({ type: 'Quote' }),

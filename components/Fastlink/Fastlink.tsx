@@ -24,7 +24,7 @@ export const Fastlink = ({ hasDarkBackground, eyebrow, fastlinkImage, fastlinkIm
         <div className='grid grid-cols-1 md:grid-cols-2'>
             <div className='flex flex-col justify-center items-center md:items-start py-12 px-12 md:px-24 xl:px-32 2xl:px-52'>
                 {eyebrow && (
-                    <h4 className={`${hasDarkBackground ? "text-white" : "text-black"} text-extra-small md:text-small lg:text-large`}>{eyebrow}</h4>
+                    <h4 className={`${hasDarkBackground ? "text-white" : "text-black"} text-extra-small md:text-small lg:text-medium`}>{eyebrow}</h4>
                 )}
                 {blocks?.map((block, i) => {
                     return(

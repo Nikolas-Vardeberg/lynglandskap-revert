@@ -42,12 +42,6 @@ export default defineType({
                 validation: (rule) => rule.required(),
               }),
               defineField({
-                type: 'string',
-                name: 'body',
-                title: 'Body',
-                validation: (rule) => rule.required(),
-              }),
-              defineField({
                 type: 'boolean',
                 name: 'imageOnRight',
                 title: 'Image On Right',
