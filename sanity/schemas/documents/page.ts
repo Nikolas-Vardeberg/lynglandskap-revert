@@ -6,12 +6,28 @@ export default defineType({
   name: 'page',
   title: 'Page',
   icon: Browser,
+  groups: [
+    {
+      name: "seo",
+      title: "Seo",
+    },
+    {
+      name: "Page",
+      title: "page"
+    }
+  ],
+  //SEO META DATA
   fields: [
+    //defineField({
+      //type: 'string',
+      //name: 'title',
+      //title: 'Title',
+      //validation: (rule) => rule.required(),
+    //}),
     defineField({
-      type: 'string',
-      name: 'title',
-      title: 'Title',
-      validation: (rule) => rule.required(),
+      name: "seo",
+      title: "Seo",
+      type: "seoPanel",
     }),
     defineField({
       type: 'slug',
