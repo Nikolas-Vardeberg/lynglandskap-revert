@@ -18,9 +18,9 @@ export default function App({ Component, pageProps }: AppProps) {
       {!isSanityStudio && (
         <Head>
           <link rel="icon" href='/favicon/favicon.ico' />
-          <title>{pageProps?.page?.seo.seoTitle}</title>
-          <meta name='description' content={pageProps?.page?.seo.seoDescription} />
-          <meta name="keywords" content={pageProps?.page?.seo.seoKeywords} />
+          <title>{pageProps?.page?.seo?.seoTitle}</title>
+          <meta name='description' content={pageProps?.page?.seo?.seoDescription} />
+          <meta name="keywords" content={pageProps?.page?.seo?.seoKeywords} />
         </Head>
       )}
 
