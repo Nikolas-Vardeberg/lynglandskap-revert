@@ -80,14 +80,14 @@ export const Navigation = ({ menu, blog }: Props) => {
       <div className={`w-full bg-green-tan mx-auto border-b absolute py-10 z-30 duration-300 shadow-md transition-all transform ${isMenuOpen ? '' : 'hidden'}`}>
         <ul className="container grid grid-cols-1 px-4 lg:grid-cols-3 items-start md:px-0 text-base justify-between w-full mx-auto">
           <li className='flex justify-start items-start order-3 lg:order-1 flex-col space-y-4'>
-            {menu.map((item) => (
+            {menu?.map((item) => (
               <Link href={item.url} className='flex justify-center items-center' key={item._key}>
                 <span className='flex text-lg items-center justify-center'>{item.title} &rarr;</span>
               </Link>
             ))}
           </li>
           <li className='flex justify-start items-start flex-col space-y-4 order-3 lg:order-2'>
-            {blog.map((item) => (
+            {blog?.map((item) => (
               <Link href={item.url} className='flex justify-center items-center' key={item._key}>
                 <span className='flex text-lg items-center'>{item.title} &rarr;</span>
               </Link>
