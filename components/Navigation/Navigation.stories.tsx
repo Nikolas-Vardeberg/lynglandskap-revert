@@ -45,4 +45,10 @@ Default.args = {
       url: '/',
     },
   ],
+  blog: [
+    {
+      label: "Blog",
+      url: "/",
+    },
+  ],
 }

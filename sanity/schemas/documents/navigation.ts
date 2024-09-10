@@ -8,12 +8,35 @@ const menuLink = {
   icon: Link,
   fields: [
     defineField({
-      title: 'Label',
-      name: 'label',
+      title: 'Title',
+      name: 'title',
       type: 'string',
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      description: "Her skriver du in url/slug til hvor knappen skal peke",
+      title: 'Url',
+      name: 'url',
+      type: 'string',
+      validation: (Rule) => Rule.required(),
+    }),
+  ],
+}
+
+const blogLink = {
+  title: 'Blog Link',
+  name: 'blogLink',
+  type: 'object',
+  icon: Link,
+  fields: [
+    defineField({
+      title: 'Title',
+      name: 'title',
+      type: 'string',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      description: "Her skriver du in url/slug til hvor knappen skal peke",
       title: 'Url',
       name: 'url',
       type: 'string',
@@ -27,12 +50,18 @@ export default defineType({
   name: 'navigation',
   title: 'Navigation',
   fields: [
-    defineField({
-      title: 'Menu',
-      name: 'menu',
-      type: 'array',
-      of: [menuLink],
-    }),
+    {
+      title: "Menu",
+      name: "menu",
+      type: "array",
+      of: [menuLink],  
+    },
+    {
+      title: "Blog",
+      name: "blog",
+      type: "array",
+      of: [blogLink],
+    }
   ],
   preview: {
     prepare() {
