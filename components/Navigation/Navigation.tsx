@@ -51,12 +51,12 @@ export const Navigation = ({ menu, blog }: Props) => {
                 Lyng Landskap
             </a>
             <div className="flex flex-row space-x-2">
-                <div onClick={handleSearchToggle} id="search-toggle" className="flex border border-green-tan text-green-tan min-w-fit min-h-fit h-0 px-6 py-5 justify-center rounded-full hover:bg-green-tan hover:text-black duration-300 ">
+                <div onClick={handleSearchToggle} id="search-toggle" className="flex border border-green-tan text-green-tan min-w-fit min-h-fit h-0 px-3 md:px-6 py-4 md:py-5 justify-center rounded-full hover:bg-green-tan hover:text-black duration-300 ">
                     <div className="flex justify-center items-center">
                         <span className="flex text-sm md:text-base items-center space-x-1"><MdOutlineSearch className="mr-2 text-lg items-center justify-center flex mx-auto"/>Søk</span>
                     </div>
                 </div>
-                <div onClick={handleMenuToggle} className="flex border border-green-tan text-green-tan min-w-fit min-h-fit h-0 px-8 py-5 justify-center items-center rounded-full hover:bg-green-tan hover:text-black duration-300 ">
+                <div onClick={handleMenuToggle} className="flex border border-green-tan text-green-tan min-w-fit min-h-fit h-0 px-4 md:px-8 py-3 md:py-5 justify-center items-center rounded-full hover:bg-green-tan hover:text-black duration-300 ">
                     <div className="flex justify-center items-center">
                         <span className="flex text-sm md:text-base items-center justify-center"><IoIosMenu className="mr-2 items-center text-lg justify-center flex mx-auto"/>Meny</span>
                     </div>
@@ -94,7 +94,7 @@ export const Navigation = ({ menu, blog }: Props) => {
             ))}
           </li>
           <li className='order-1 lg:order-3 flex items-start justify-start pb-4 flex-col w-full space-y-4'>
-            <Link href="/kontakt" className="flex border border-white bg-white text-black w-full md:max-w-fit min-h-fit h-0 px-8 md:px-12 py-7 justify-between items-center rounded-full hover:bg-green-dark hover:border-green-dark hover:text-white duration-300 ">
+            <Link href="/kontakt" className="flex border border-green-dark bg-green-dark text-white w-full md:max-w-fit min-h-fit h-0 px-8 md:px-12 py-7 justify-between items-center rounded-full hover:bg-white hover:white-dark hover:text-black duration-300 ">
               <span className='flex justify-between items-center w-full text-base'>
                 <span className='flex items-center justify-center'>Kontakt Oss</span>
                 &rarr;
