@@ -6,10 +6,12 @@ import { PreviewBanner } from 'components/preview/PreviewBanner'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
+import SearchFeedback from 'components/static/SearchFeedback'
 
 export default function App({ Component, pageProps }: AppProps) {
   const { route } = useRouter()
   const isSanityStudio = route.startsWith('/studio')
+  const isBlog = route.startsWith("/blog")
   const navigation = pageProps?.global?.navigation
   const footer = pageProps?.global?.footer
 
@@ -27,6 +29,7 @@ export default function App({ Component, pageProps }: AppProps) {
       {pageProps?.preview && <PreviewBanner />}
       {!isSanityStudio && <Navigation blog={navigation?.blog} menu={navigation?.menu} />}
       <Component {...pageProps} />
+      {isBlog && <SearchFeedback />}
       {!isSanityStudio && <Footer {...footer} />}
     </>
   )

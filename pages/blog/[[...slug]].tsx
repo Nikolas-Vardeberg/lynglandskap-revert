@@ -11,6 +11,7 @@ import {
   getPagePaths,
 } from '../../sanity/lib/sanity.client'
 import { buildComponent } from 'utils/buildComponent'
+import SearchFeedback from 'components/static/SearchFeedback'
 
 const PagePreview = lazy(() => import('layout/Preview'))
 

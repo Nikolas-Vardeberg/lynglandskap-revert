@@ -69,7 +69,7 @@ export const Navigation = ({ menu, blog }: Props) => {
           <form method="get">
             <div className="w-full max-w-[500px] items-center rounded-full h-12 border border-green-dark flex bg-white overflow-hidden">
               <MdSearch className='mx-2 text-green-dark' />
-              <input placeholder="Søk..." className="bg-inherit border-none outline-none" />
+              <input placeholder="Søk..." className="bg-inherit text-green-dark border-none outline-none" />
               <button type="submit" className="h-full bg-green-dark p-4 flex justify-center items-center text-white">
                 Søk
               </button>
